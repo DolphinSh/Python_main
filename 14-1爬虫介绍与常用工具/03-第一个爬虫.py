@@ -10,4 +10,15 @@ response = urlopen(url)
 info = response.read()
 
 # 4 打印内容
-print(info)
+#print(info)
+print(info.decode())
+
+# 返回HTTP的响应码
+print(response.getcode())
+
+# 返回实际访问的url
+print(response.geturl())
+
+# 返回HTTP响应头
+print("返回HTTP响应头")
+print(response.info())
